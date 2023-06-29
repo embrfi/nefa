@@ -1,51 +1,50 @@
 <template>
   <div class="w-full ">
     <!-- Hero section (text-lg)-->
-    <section id="hero" class="w-full mt-60">
+    <section id="hero" class="w-full mt-24 pb-24 justify-between">
       <BaseSection>
-        <div class="col-span-12 lg:col-span-12 items-center mt-25 xl:mt-30 space-y-8 sm:space-y-6 px-2 text-center sm:text-center">
+        <div class="flex flex-col col-span-12 lg:col-span-6 mt-6 xl:mt-10 space-y-2 sm:space-y-3 px-2 sm:text-left min-h-full place-content-evenly">
+
           <h1
             data-aos="fade-right"
             data-aos-once="true"
-            class="text-[2rem] text-center sm:text-5xl xl:text-6xl font-bold leading-tight capitalize sm:pr-8 sm:pl-8 xl:pr-5 text-yellow-100 mt-6"
+            class="flex text-[2rem] sm:text-5xl xl:text-6xl font-bold leading-tight capitalize sm:pr-8 sm:pl-8 xl:pr-5 text-yellow-100 mt-6"
           >
             DeFi's First BTC 
           </h1>
-          <span class="text-header-gradient text-[6rem] text-center xl:text-6xl font-bold leading-tight capitalize sm:pr-8 sm:pl-8 xl:pr-5">0% interest loans</span>
+          <span data-aos="fade-right" data-aos-once="true" data-aos-delay="300" class="text-header-gradient text-[6rem] xl:text-6xl font-bold leading-tight capitalize sm:pr-8 sm:pl-8 xl:pr-5">0% interest loans</span>
           <div
             data-aos="fade-up"
             data-aos-once="true"
-            data-aos-delay="200"
-            class="flex flex-col items-center sm:space-y-0 sm:space-x-4 mt-2"
+            data-aos-delay="600"
+            class="flex flex-col sm:space-y-0 sm:pl-8 sm:space-x-4 mt-2"
           >
             <BaseButton
-              class="max-w-full flex px-8 py-2 bg-gradient-to-r from-[#f97871ff] to-[#c24524ff] text-lg text-yellow-100"
+              class="max-w-full  w-4/12 px-4 py-2 bg-gradient-to-r from-[#f97871ff] to-[#c24524ff] text-lg text-yellow-100"
             >
               Enter App
             </BaseButton>
           </div>
-          <div class="items-center sm:space-x-4 capitalize">
+          <div class="sm:space-x-4 capitalize">
             <p data-aos="fade-down" data-aos-once="true" data-aos-delay="700" class="paragraph uppercase font-semibold mt-40 text-yellow-100">
                 <!--this is where total value title goes-->
             </p> 
           </div>
-          <div class="items-center">
-            <h1
+        </div>
+        <div class="col-span-6 flex justify-center">
+            <img
               data-aos="fade-up"
-              data-aos-delay="1000"
               data-aos-once="true"
-              class="items-center sm:text-4xl xl:text-6xl font-bold leading-tight mt-0"
-            >
-            <!--this is where TVL counter should go-->
-             <!--<span class="text-header-gradient text-[6rem]">What is Embr?</span>--> 
-            </h1>
-        </div>
-        </div>
+              :src="require('~/assets/img/bitcoinlogo.webp')"
+              class="mt-4 "
+              alt=""
+            />
+          </div>
 
       </BaseSection>
     </section>
     <!-- Getting started section -->
-    <section class="relative max-w-full shadow overflow-hidden mt-5 bg-[#f8efd3] items-stretch">
+    <section class="relative max-w-full overflow-hidden mt-5 bg-[#f6f7e3] shadow-lg">
       <div class="w-full  pt-3 pb-8 flex flex-col px-48 ">
         <div
           data-aos="fade-up"
@@ -57,59 +56,22 @@
     </section>
 
     <!-- Partners section -->
-    <section class="bg-partner relative max-w-full sm:mx-6 my-24 shadow sm:rounded-2xl overflow-hidden">
+    <section class="relative max-w-full shadow verflow-hidden bg-[#373555ff]">
       <div class="w-full px-6 sm:px-0 py-16 flex flex-col items-center justify-center space-y-4 text-center">
-        <h3 data-aos="flip-down" class="text-2xl text-neutral-800 font-semibold">Trusted Partners Worldwide</h3>
-        <p data-aos="flip-down" class="paragraph">We're partners with countless major organisations around the globe</p>
+        <h3 data-aos="flip-down" class="text-4xl text-yellow-100 font-semibold">Trusted Partners</h3>
+        <p data-aos="flip-down" class="paragraph text-yellow-100">Coming soon...</p>
         <div data-aos="fade-up" class="flex flex-wrap items-center justify-center">
-          <LandingPartnerImage
+          <!--start here to add partner images <LandingPartnerImage
             v-for="img in ['clever.png', 'diamon-cutts.png', 'swiss-finance.png', 'gambio.png']"
             :key="img"
             :img="img"
-          />
+          />-->
         </div>
       </div>
     </section>
-
-    <!-- Industry-leading security section -->
-    <section class="w-full my-24">
-      <div class="relative max-w-screen-xl px-8 mx-auto grid grid-cols-12 gap-x-6">
-        <div data-aos="fade-right" class="col-span-12 lg:col-span-6">
-          <div class="w-full">
-            <img :src="require('~/assets/img/industry-leading-security.webp')" class="w-full" alt="" />
-          </div>
-        </div>
-        <div data-aos="fade-left" class="col-span-12 lg:col-span-5 space-y-8 sm:space-y-6 mt-8 xl:px-8">
-          <h2 class="text-4xl font-semibold">Industry-leading security from day one</h2>
-          <ul class="space-y-8 sm:space-y-4">
-            <LandingListItem title="Safety, security and compliance">
-              <p class="text-sm text-gray-700 leading-relaxed">
-                NEFA is a licensed New York trust company that undergoes regular bank exams and is subject to the
-                cybersecurity audits conducted by the New York Department of Financial Services.
-                <span class="underline">Learn more</span> about our commitment to security.
-              </p>
-            </LandingListItem>
-            <LandingListItem title="Hardware security keys">
-              <p class="text-sm text-gray-700 leading-relaxed">
-                With NEFA you can secure your account with a hardware security key via WebAuthn.
-              </p>
-            </LandingListItem>
-            <LandingListItem title="SOC Certifications">
-              <p class="text-sm text-gray-700 leading-relaxed">
-                NEFA is <span class="underline">SOC 1 Type 2</span> and
-                <span class="underline">SOC 2 Type 2</span> compliant. We are the world’s first cryptocurrency exchange
-                and custodian to complete these exams.
-              </p>
-            </LandingListItem>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-
     <!-- FAQ section -->
-    <section class="w-full my-24">
-      <BaseSection>
+    <section class="relative w-full py-24 shadow sm:rounded-2xl overflow-hidden content-center bg-[#373555ff]">
+      <BaseSection class="bg-[#46418dff] rounded-md shadow-lg py-2">
         <div data-aos="fade-right" data-aos-delay="150" class="col-span-12 lg:col-span-6">
           <div class="w-full">
             <img :src="require('~/assets/img/faq.webp')" class="w-full" alt="" />
@@ -117,27 +79,14 @@
         </div>
         <div data-aos="fade-left" data-aos-delay="150" class="col-span-12 lg:col-span-6 px-4 sm:px-6 mt-8">
           <span class="text-base text-gradient font-semibold uppercase mb-4 sm:mb-2">Support</span>
-          <h2 class="text-3xl sm:text-4xl font-semibold mb-10 sm:mb-6">Frequently asked questions</h2>
+          <h2 class="text-3xl sm:text-4xl font-semibold mb-10 sm:mb-6 text-yellow-100">Frequently asked questions</h2>
 
-          <ul class="shadow-box">
+          <ul class="shadow-box text-yellow-100">
             <BaseAccordion v-for="(accordion, index) in accordions" :key="index" :accordion="accordion" />
           </ul>
         </div>
       </BaseSection>
     </section>
-
-    <div class="w-full my-10 flex justify-center">
-      <a
-        v-smooth-scroll
-        data-aos="flip-down"
-        data-aos-delay="150"
-        href="#navbar"
-        class="px-6 py-3 flex items-center space-x-2 bg-[#FAFAFA] hover:bg-gray-100 hover:shadow-md border border-[#DDDDDD] rounded-md text-gray-700"
-      >
-        <span>Back to top</span>
-        <ArrowUpIcon :size="20" />
-      </a>
-    </div>
   </div>
 </template>
 
@@ -148,151 +97,26 @@ export default {
   mixins: [aosMixin],
   data() {
     return {
-      selected: 0,
-      dropdownConcurency: false,
-      dropdownCrypto: false,
-      currencySelected: {
-        img: 'country-icon/eng.png',
-        name: 'USD',
-      },
-      currencies: [
-        {
-          img: 'country-icon/eng.png',
-          name: 'USD',
-        },
-      ],
-      cryptoSelected: {
-        img: 'crypto-icon/bitcoin.png',
-        name: 'BTC',
-      },
-      cryptocurrencies: [
-        {
-          img: 'crypto-icon/bitcoin.png',
-          name: 'BTC',
-        },
-      ],
-      trendings: [
-        {
-          id: 1,
-          name: 'Bitcoin',
-          price: 43180.13,
-          logo: 'bitcoin.png',
-          increase: true,
-          data: [40, 35, 60, 75, 60, 75, 50],
-        },
-        {
-          id: 2,
-          name: 'Ethereum',
-          price: 3480.65,
-          logo: 'ethereum.png',
-          increase: false,
-          data: [25, 30, 60, 50, 80, 55, 80],
-        },
-        {
-          id: 3,
-          name: 'Solana',
-          price: 150.2,
-          logo: 'solana.png',
-          increase: true,
-          data: [40, 45, 40, 80, 50, 60, 35],
-        },
-        {
-          id: 4,
-          name: 'Dogecoin',
-          price: 0.1572,
-          logo: 'dogecoin.png',
-          increase: true,
-          data: [35, 70, 60, 80, 50, 60, 40],
-        },
-      ],
-      topGainers: [
-        {
-          id: 1,
-          name: 'PAPPAY',
-          price: 0.00374,
-          logo: 'pappay.png',
-          increase: true,
-          data: [30, 50, 45, 60, 70, 40, 45],
-        },
-        {
-          id: 2,
-          name: 'Bitcoin Asia',
-          price: 0.02096,
-          logo: 'bitcoin-asia.png',
-          increase: true,
-          data: [25, 60, 50, 60, 35, 50, 70],
-        },
-        {
-          id: 3,
-          name: 'MoonRock',
-          price: 0.004907,
-          logo: 'moonrock.png',
-          increase: true,
-          data: [40, 35, 40, 25, 50, 70, 45],
-        },
-        {
-          id: 4,
-          name: 'NinjaFloki',
-          price: 0.000123,
-          logo: 'ninjafloki.png',
-          increase: true,
-          data: [45, 35, 40, 30, 25, 45, 35],
-        },
-      ],
-      recents: [
-        {
-          id: 1,
-          name: 'MetaCraft',
-          price: 0.0608,
-          logo: 'metacraft.png',
-          increase: false,
-          data: [40, 50, 45, 60, 35, 40, 45],
-        },
-        {
-          id: 2,
-          name: 'Frog',
-          price: 0.5875,
-          logo: 'frog.png',
-          increase: false,
-          data: [25, 50, 45, 48, 40, 60, 45],
-        },
-        {
-          id: 3,
-          name: 'Musk Doge',
-          price: 0.04041,
-          logo: 'musk-doge.png',
-          increase: true,
-          data: [25, 35, 60, 45, 50, 45, 45],
-        },
-        {
-          id: 4,
-          name: '2SHARE',
-          price: 1366.24,
-          logo: '2share.png',
-          increase: true,
-          data: [35, 30, 60, 50, 35, 45, 40],
-        },
-      ],
       accordions: [
         {
-          title: 'Why should I choose NEFA?',
+          title: 'What is EMBR?',
           description:
-            "We're industry pioneers, having been in the cryptocurrency industry since 2016. We've facilitated more than 21 billion USD worth of transactions on our exchange for customers in over 40 countries. Today, we're trusted by over 8 million customers around the world and have received praise for our easy-to-use app, secure wallet, and range of features.",
+            "Liquity is a decentralized borrowing protocol, where a user can deposit collateral in the form of BTC and draw a 0% interest loan against it. You will be given $ESC the USD stable token and must maintain a collateral ration (BTC > ESC taken) of 110% or more. These loans are secured not only by the collateral placed in the contract, they are also maintained by the Stability Pool feature containing ESC acting as guarantors of last resort in case of black swan events.",
         },
         {
-          title: 'How secure is NEFA?',
+          title: 'What is BTC.b?',
           description:
-            "We're industry pioneers, having been in the cryptocurrency industry since 2016. We've facilitated more than 21 billion USD worth of transactions on our exchange for customers in over 40 countries. Today, we're trusted by over million customers around the world and have received praise for our easy-to-use app, secure wallet, and range of features.",
+            "BTC.b is a newly launched wrapped version of Bitcoin on the Avalanche Network. BTC is moved to Avalanche via the Avalanche Bridge. BTC.b is an ideal candidate to bring true omnichain Bitcoin to all LayerZero supported chains. With BTC.b and the OFT standard, users can now securely transfer their BTC across chains without facing these compatibility challenges.",
         },
         {
-          title: 'Do I have to buy a whole Bitcoin?',
+          title: 'What is a OFT?',
           description:
-            "We're industry pioneers, having been in the cryptocurrency industry since 2016. We've facilitated more than 21 billion USD worth of transactions on our exchange for customers in over 40 countries. Today, we're trusted by over million customers around the world and have received praise for our easy-to-use app, secure wallet, and range of features.",
+            "The OFT standard allows for any fungible token to be securely transferred across chains without the need for middlechains or trusted validators. The OFT standard is built on top of LayerZero’s innovative omnichain messaging infrastructure and is not subject to the security vulnerabilities of existing bridging solutions. Essentially Layer Zero tech allows for true omnichain potential and interoperability.",
         },
         {
-          title: 'How do I actually buy Bitcoin?',
+          title: 'How can I eaarn from EMBR?',
           description:
-            "We're industry pioneers, having been in the cryptocurrency industry since 2016. We've facilitated more than 21 billion USD worth of transactions on our exchange for customers in over 40 countries. Today, we're trusted by over million customers around the world and have received praise for our easy-to-use app, secure wallet, and range of features.",
+            "Users can deposit their $ESC into the Stability Pool and earn from liquidations & EMBR incentives. Also a user can stake their EMBR to earn revenue from the issuance fees(borrow fees represented in ESC) and redemption fees (represented as BTC.b)",
         },
       ],
       steps: [
@@ -300,19 +124,19 @@ export default {
           img: 'bitcoinlogo.png',
           title: 'Deposit',
           description:
-            'Deposit BTC.b as collateral and open a Trove.',
+            'Deposit BTC.b as collateral and open a Trove. Receive ESC, a USD pegged asset, and use in all avenues of DeFi or beyond!',
         },
         {
           img: 'percenticon.png',
           title: 'Loan',
           description:
-            'Take a loan against your BTC.b in ESC for up to 90%.',
+            '0$ interest loans means you have no obligations in paying back your loan, truly unlocking the potential of BTC and your capital.',
         },
         {
           img: 'esclogo.png',
           title: 'Enjoy',
           description:
-            'Enjoy a fully decentralized, overcollateralized stable ESC, and use in all parts of DeFi to invest, stake, or hold!',
+            'Stake EMBR or ESC in the pools to earn from protocol generated fees and liquidations.',
         },
       ],
     }
@@ -333,7 +157,7 @@ export default {
 }
 .bg-trading-tools {
   background-position: center;
-  background-color: rgb(235, 220, 178);
+  background-color: rgb(255, 255, 255);
 }
 .max-h-0 {
   max-height: 0;

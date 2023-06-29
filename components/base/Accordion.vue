@@ -11,7 +11,7 @@
     <transition name="slide">
       <div v-if="selected" class="relative overflow-hidden transition-all duration-700" style="">
         <div class="py-2">
-          <p class="text-sm text-gray-700 tracking-wide leading-relaxed">
+          <p class="text-sm text-yellow-100 tracking-wide leading-relaxed">
             {{ accordion.description }}
           </p>
         </div>

@@ -2,7 +2,7 @@
   <div class="min-h-screen font-sans antialiased relative">
     <div class="relative">
       <div
-        class="absolute top-0 left-0 w-full h-5/6 sm:h-5/6 lg:h-5/6 cover-gradient-2 sm:cover-gradient"
+        class="absolute top-0 left-0 w-full h-4/6 sm:h-5/6 lg:h-4/6 cover-gradient-2 sm:cover-gradient"
       ></div>
       <BaseNavbar />
 
@@ -10,7 +10,7 @@
         <Nuxt />
       </main>
 
-      <BaseFooter />
+      <BaseFooter class="pt-4"/>
     </div>
   </div>
 </template>
@@ -25,7 +25,7 @@ export default {
   background: #373555ff;
 }
 .cover-gradient-2 {
-  background: #373555ff;
+  background: linear-gradient(136.91deg, #373555ff , #46418dff 110%);
 }
 .bg-blue-gradient,
 .text-gradient {

@@ -34,7 +34,7 @@
 
           </div>
           <ul class="space-y-1 text-[#373555ff]">
-            <h3 class = "font-bold text-xl underline md:px-8">Learn</h3>
+            <h3 class = "font-bold text-xl underline md:px-8">Learn It</h3>
             <NavLink name="Documentation" url="#" />
             <NavLink name="FAQ" url="#" />
           </ul>

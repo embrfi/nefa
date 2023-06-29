@@ -1,16 +1,16 @@
 <template>
-  <footer class="max-w-screen-xl px-8 mx-auto">
-    <div class="w-full border-y border-[#DDDDDD]">
+  <footer class="max-w-screen-xl px-8 mx-auto text-[#373555ff]">
+    <div class="w-full border-y border-[#DDDDDD] text-[#373555ff]">
       <div class="grid xl:grid-cols-4 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1">
         <div
-          class="md:w-full lg:w-full w-full sm:w-1/2 xl:w-fit flex flex-col sm:flex-row sm:px-6 py-6 sm:py-12 sm:space-x-10 sm:border-r-0 border-[#DDDDDD]"
+          class="md:w-full lg:w-full w-full sm:w-1/2 xl:w-fit flex flex-col sm:flex-row sm:px-6 py-6 sm:py-12 sm:space-x-10 sm:border-r-0 border-[#f10000]"
         >
           <div class="sm:hidden xl:block mb-6 sm:mb-0">
             <a href="#">
               <img :src="require('~/assets/img/logo/nefa.svg')" class="w-24 -mt-2" alt="Nefa Logo" />
             </a>
           </div>
-          <ul class="space-y-4">
+          <ul class="space-y-4 text-[#373555ff]">
             <NavLink name="Cryptocurrency" url="#" />
             <NavLink name="Exchanges" url="#" />
             <NavLink name="Watchlist" url="#" />
@@ -54,7 +54,7 @@
               placeholder="Enter your email"
             />
             <button
-              class="bg-blue-gradient px-4 py-4 sm:py-3 rounded-md text-white hover:shadow-md transition duration-300"
+              class="bg-blue-gradient px-4 py-4 sm:py-3 rounded-md text-[#373555ff] hover:shadow-md transition duration-300"
             >
               <ArrowRightIcon :size="20" />
             </button>
@@ -63,7 +63,7 @@
       </div>
     </div>
     <div class="py-8 sm:py-4 text-center text-sm text-[#666666] hover:text-gray-900">
-      &copy; Copyright 2022 NEFA LLC. All rights reserved
+      &copy; Copyright to all of Defi
     </div>
   </footer>
 </template>

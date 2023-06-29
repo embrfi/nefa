@@ -1,6 +1,6 @@
 <template>
   <button
-    class="text-sm text-center rounded-full hover:shadow-md hover:shadow-[#0c66ee]/50 transition duration-300"
+    class="text-lg text-center rounded-md hover:shadow-md hover:shadow-[#191828ff]/50 transition duration-300"
     v-bind="$attrs"
     v-on="$listeners"
   >

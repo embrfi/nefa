@@ -1,6 +1,6 @@
 export default {
   head: {
-    title: 'NEFA',
+    title: 'Embr | BTC.b unlocked',
     htmlAttrs: {
       lang: 'en',
     },

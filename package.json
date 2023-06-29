@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
+    "build": "nuxt build && SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts build",
+    "start": "nuxt start && SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
     "generate": "nuxt generate",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint:prettier": "prettier --check .",
@@ -41,4 +41,6 @@
     "prettier": "^2.5.1",
     "tailwindcss": "^3.0.15"
   }
+
+ }
 }
